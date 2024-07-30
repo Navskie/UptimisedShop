@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap');
+
+/* Define global variables */
+:root {
+   --primary-color: #0d6efd;
+   --secondary-color: #6c757d;
+   --success-color: #198754;
+   --danger-color: #dc3545;
+   --warning-color: #ffc107;
+   --info-color: #0dcaf0;
+   --light-color: #f8f9fa;
+   --dark-color: #212529;
+   --muted-color: #6c757d;
+   --black-color: #000000;
+   --white-color: #ffffff;
+   --font-family: "Geologica", sans-serif;
+   --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+   --small-text: 12px;
+}
+
+/* Global Styles */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   background-color: var(--white-color);
+   font-family: var(--font-family);
+}
+
+li {
+   list-style: none;
+}
+
+/* Navbar */
+.navbar {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 70px; /* Adjust the height as needed */
+   background-color: var(--white-color);
+   box-shadow: var(--box-shadow);
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 80px;
+   z-index: 1000; /* Ensure it stays on top */
+}
+
+.navbar-logo {
+   margin: 0; /* Adjusted for alignment */
+}
+
+.navbar-logo img {
+   height: 40px; /* Adjust based on your logo size */
+}
+
+.navbar-items {
+   display: flex;
+   gap: 20px;
+   flex-direction: row;
+   align-items: center;
+}
+
+.navbar-items .nav-item {
+   text-decoration: none;
+   color: var(--primary-color);
+   font-size: 14px;
+   padding: 8px;
+   transition: color 0.3s ease;
+   display: flex;
+   align-items: center;
+}
+
+.navbar-items .nav-item .nav-text {
+   margin-left: 8px; /* Space between icon and text */
+}
+
+/* Mobile View Adjustments */
+@media (max-width: 768px) {
+   .navbar-items {
+      display: none; /* Hide navbar items by default on mobile */
+   }
+
+   .navbar-logo {
+      display: flex;
+      justify-content: center; /* Center logo */
+      width: 100%; /* Full width for logo */
+   }
+
+   .mobile-bottom-nav {
+      display: flex; /* Show on mobile */
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: var(--white-color);
+      box-shadow: var(--box-shadow);
+      justify-content: space-around;
+      padding: 10px;
+      z-index: 1000;
+   }
+
+   .mobile-bottom-nav .nav-item {
+      flex-direction: column;
+      align-items: center;
+      font-size: 16px;
+      padding: 8px;
+   }
+
+   .mobile-bottom-nav .nav-text {
+      display: none; /* Hide text on mobile bottom nav */
+   }
+}
+
+/* Hide mobile bottom nav on larger screens */
+@media (min-width: 769px) {
+   .mobile-bottom-nav {
+      display: none;
+   }
+}
+
+/* Main Content */
+.shop-body {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px; /* Increased gap between cards */
+   padding: 16px;
+   justify-content: center;
+   padding-top: 100px;
+   padding-bottom: 90px;
+}
+
+.card {
+   flex: 1 1 calc(20% - 20px);
+   max-width: calc(20% - 20px);
+   box-sizing: border-box;
+   padding: 16px;
+   background-color: var(--white-color);
+   box-shadow: var(--box-shadow);
+   border-radius: 8px;
+   transition: background-color 0.3s ease;
+   position: relative;
+   overflow: hidden;
+   height: 300px;
+   display: flex;
+   flex-direction: column;
+}
+
+.card .skeleton {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: #e0e0e0;
+   border-radius: 8px;
+   animation: pulse 1.5s infinite ease-in-out;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   color: var(--background-color);
+}
+
+.card.loading .skeleton {
+   display: flex;
+}
+
+.card .card-content {
+   display: none;
+   padding: 16px;
+   flex: 1; /* Ensures content takes up available space */
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between; /* Aligns content to take up available space */
+}
+
+.card:not(.loading) .card-content {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-start;
+}
+
+.card-content span {
+   font-size: 12px;
+   font-weight: 600;
+   margin-bottom: 6px;
+}
+
+.card-content hr {
+   margin: 10px 0;
+}
+
+.card-content li {
+   font-size: var(--small-text);
+}
+
+.cart-btn {
+   margin-top: auto; /* Pushes the button to the bottom of the card */
+   background-color: var(--primary-color);
+   color: var(--white-color);
+   border: none;
+   border-radius: 4px;
+   padding: 10px 20px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.cart-btn:hover {
+   background-color: darken(var(--primary-color), 10%);
+}
+
+@keyframes pulse {
+   0% {
+       background-color: #e0e0e0;
+   }
+   50% {
+       background-color: #f4f4f4;
+   }
+   100% {
+       background-color: #e0e0e0;
+   }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+   .card {
+       flex: 1 1 calc(23% - 20px); /* Adjusted to fit 4 cards per row with added margin */
+       max-width: calc(23% - 20px);
+   }
+}
+
+@media (max-width: 900px) {
+   .card {
+       flex: 1 1 calc(33.333% - 20px); /* Adjusted to fit 3 cards per row with added margin */
+       max-width: calc(33.333% - 20px);
+   }
+}
+
+@media (max-width: 600px) {
+   .card {
+       flex: 1 1 calc(50% - 20px); /* Adjusted to fit 2 cards per row with added margin */
+       max-width: calc(50% - 20px);
+   }
+}
+
+@media (max-width: 400px) {
+   .card {
+       flex: 1 1 calc(100% - 20px); /* Adjusted to fit 1 card per row with added margin */
+       max-width: calc(100% - 20px);
+   }
+}

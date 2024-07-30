@@ -1,1 +1,71 @@
-<?php include '.config/dbconnection.php' ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Card with Skeleton Loader</title>
+   <link rel="stylesheet" href="assets/css/custom.css">
+   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+   <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar">
+      <!-- Logo for larger screens and mobile -->
+      <div class="navbar-logo">
+         <img src="assets/images/logo.png" alt="Logo">
+      </div>
+      
+      <!-- Navigation items -->
+      <div class="navbar-items">
+         <a href="#" class="nav-item"><i class="bx bx-home"></i><span class="nav-text">Home</span></a>
+         <a href="#" class="nav-item"><i class="bx bx-search"></i><span class="nav-text">Search</span></a>
+         <a href="#" class="nav-item"><i class="bx bx-cart"></i><span class="nav-text">Cart</span></a>
+         <a href="#" class="nav-item"><i class="bx bx-user"></i><span class="nav-text">Profile</span></a>
+      </div>
+   </nav>
+
+   <!-- Main Content -->
+   <div class="shop-body">
+      <div class="card loading">
+         <div class="skeleton"></div>
+         <div class="card-content">
+            <h2>PCK03CD</h2>
+            <hr>
+            <span>Package Included: </span>
+            <ul>
+               <li>Basic Line (2)</li>
+               <li>Deo Cream (2)</li>
+            </ul>
+            <button class="cart-btn">Checkout</button>
+         </div>
+      </div>
+      <div class="card loading">
+         <div class="skeleton"></div>
+         <div class="card-content">
+            <h2>PCK03CD</h2>
+            <hr>
+            <span>Package Included: </span>
+            <ul>
+               <li>Basic Line (2)</li>
+               <li>Deo Cream (2)</li>
+            </ul>
+            <button class="cart-btn">Checkout</button>
+         </div>
+      </div>
+      <!-- Repeat .card as needed -->
+   </div>
+
+   <!-- Mobile Bottom Navigation -->
+   <div class="mobile-bottom-nav">
+      <a href="#" class="nav-item"><i class="bx bx-home"></i><span class="nav-text">Home</span></a>
+      <a href="#" class="nav-item"><i class="bx bx-search"></i><span class="nav-text">Search</span></a>
+      <a href="#" class="nav-item"><i class="bx bx-cart"></i><span class="nav-text">Cart</span></a>
+      <a href="#" class="nav-item"><i class="bx bx-user"></i><span class="nav-text">Profile</span></a>
+   </div>
+
+   <!-- Scripts -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script src="assets/js/skeleton.js"></script>
+</body>
+</html>
