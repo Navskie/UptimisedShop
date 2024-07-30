@@ -18,11 +18,12 @@
       
       <!-- Navigation items -->
       <div class="navbar-items">
-         <a href="#" class="nav-item"><i class="bx bx-home"></i><span class="nav-text">Home</span></a>
-         <a href="#" class="nav-item"><i class="bx bx-search"></i><span class="nav-text">Search</span></a>
-         <a href="#" class="nav-item"><i class="bx bx-cart"></i><span class="nav-text">Cart</span></a>
-         <a href="#" class="nav-item"><i class="bx bx-user"></i><span class="nav-text">Profile</span></a>
+         <a href="#" class="nav-item active"><span class="nav-text">Home</span></a>
+         <a href="#" class="nav-item"><span class="nav-text">Search</span></a>
+         <a href="#" class="nav-item cart-btn"><span class="nav-text">Cart</span></a>
+         <a href="#" class="nav-item"><span class="nav-text">Profile</span></a>
       </div>
+
    </nav>
 
    <!-- Main Content -->
@@ -37,7 +38,7 @@
                <li>Basic Line (2)</li>
                <li>Deo Cream (2)</li>
             </ul>
-            <button class="cart-btn">Checkout</button>
+            <button class="cart-btn">Add to Cart</button>
          </div>
       </div>
       <div class="card loading">
@@ -50,7 +51,7 @@
                <li>Basic Line (2)</li>
                <li>Deo Cream (2)</li>
             </ul>
-            <button class="cart-btn">Checkout</button>
+            <button class="cart-btn">Add to Cart</button>
          </div>
       </div>
       <!-- Repeat .card as needed -->
@@ -60,12 +61,31 @@
    <div class="mobile-bottom-nav">
       <a href="#" class="nav-item"><i class="bx bx-home"></i><span class="nav-text">Home</span></a>
       <a href="#" class="nav-item"><i class="bx bx-search"></i><span class="nav-text">Search</span></a>
-      <a href="#" class="nav-item"><i class="bx bx-cart"></i><span class="nav-text">Cart</span></a>
+      <a href="#" class="nav-item cart-btn"><i class="bx bx-cart"></i><span class="nav-text">Cart</span></a>
       <a href="#" class="nav-item"><i class="bx bx-user"></i><span class="nav-text">Profile</span></a>
+   </div>
+
+   <!-- Cart Sidebar -->
+   <div class="cart-sidebar" id="cartSidebar">
+      <button class="close-btn" id="closeSidebar">&times;</button>
+      <h2>Shopping Cart</h2>
+      <div class="cart-items">
+         <!-- Example cart items -->
+         <div class="cart-item">
+            <span class="item-name">Item Name</span>
+            <span class="item-price">$0.00</span>
+         </div>
+         <!-- Repeat cart-item for each item in cart -->
+      </div>
+      <div class="cart-total">
+         <span>Total: </span><span id="cartTotal">$0.00</span>
+      </div>
+      <button class="checkout-btn">Checkout</button>
    </div>
 
    <!-- Scripts -->
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
    <script src="assets/js/skeleton.js"></script>
+   <script src="assets/js/cart.js"></script>
 </body>
 </html>

@@ -22,4 +22,12 @@ $(document).ready(function() {
          $('#cartSidebar').removeClass('active');
       }
    });
+
+   // Navigation item click event
+   $('.navbar-items .nav-item').on('click', function() {
+      // Remove active class from all items
+      $('.navbar-items .nav-item').removeClass('active');
+      // Add active class to the clicked item
+      $(this).addClass('active');
+   });
 });
