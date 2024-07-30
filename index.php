@@ -4,9 +4,7 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Card with Skeleton Loader</title>
-   <link rel="stylesheet" href="assets/css/custom.css">
-   <link rel="icon" href="/favicon.ico" type="image/x-icon">
-   <link rel="stylesheet" href="https://unpkg.com/boxicons/css/boxicons.min.css">
+   <?php include_once 'inc/css-link.php' ?>
 </head>
 <body>
    <!-- Navbar -->
@@ -19,7 +17,7 @@
       <!-- Navigation items -->
       <div class="navbar-items">
          <a href="#" class="nav-item active"><span class="nav-text">Home</span></a>
-         <a href="#" class="nav-item"><span class="nav-text">Search</span></a>
+         <a href="#" class="nav-item"><span class="nav-text">Shop</span></a>
          <a href="#" class="nav-item cart-btn"><span class="nav-text">Cart</span></a>
          <a href="#" class="nav-item"><span class="nav-text">Profile</span></a>
       </div>
@@ -38,7 +36,7 @@
                <li>Basic Line (2)</li>
                <li>Deo Cream (2)</li>
             </ul>
-            <button class="cart-btn">Add to Cart</button>
+            <button class="cart-btn add-to-cart">Add to Cart</button>
          </div>
       </div>
       <div class="card loading">
@@ -51,7 +49,7 @@
                <li>Basic Line (2)</li>
                <li>Deo Cream (2)</li>
             </ul>
-            <button class="cart-btn">Add to Cart</button>
+            <button class="cart-btn add-to-cart">Add to Cart</button>
          </div>
       </div>
       <!-- Repeat .card as needed -->
@@ -60,6 +58,7 @@
    <!-- Mobile Bottom Navigation -->
    <div class="mobile-bottom-nav">
       <a href="#" class="nav-item"><i class="bx bx-home"></i><span class="nav-text">Home</span></a>
+      <a href="#" class="nav-item"><i class="bx bx-search"></i><span class="nav-text">Search</span></a>
       <a href="#" class="nav-item"><i class="bx bx-search"></i><span class="nav-text">Search</span></a>
       <a href="#" class="nav-item cart-btn"><i class="bx bx-cart"></i><span class="nav-text">Cart</span></a>
       <a href="#" class="nav-item"><i class="bx bx-user"></i><span class="nav-text">Profile</span></a>
@@ -83,9 +82,6 @@
       <button class="checkout-btn">Checkout</button>
    </div>
 
-   <!-- Scripts -->
-   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-   <script src="assets/js/skeleton.js"></script>
-   <script src="assets/js/cart.js"></script>
+   <?php include_once 'inc/js-link.php' ?>
 </body>
 </html>
