@@ -97,7 +97,7 @@
       <div class="cart-total">
          <span>Total: </span><span id="cartTotal"><?php echo $price_sign ?></span>
       </div>
-      <button class="checkout-btn">Checkout</button>
+      <a class="checkout-btn" href="checkout">Checkout</a>
    </div>
 
    <?php include_once 'include/js-link.php' ?>
