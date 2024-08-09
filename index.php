@@ -11,8 +11,8 @@
    <nav class="navbar">
       <!-- Logo for larger screens and mobile -->
       <div class="navbar-logo">
-         <!-- <img src="assets/images/logo.png" alt="Logo"> -->
-          Uptimised Shop
+         <img src="<?php echo $flagUrl ?>" width="30" height="20">
+         Uptimised Shop
       </div>
       
       <!-- Navigation items -->
