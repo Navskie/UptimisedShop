@@ -42,6 +42,8 @@
 
             $price = $priceData['country_price'];
 
+            if ($price != '') {
+
       ?>
       <div class="card loading">
          <div class="skeleton"></div>
@@ -69,6 +71,7 @@
          </div>
       </div>
       <?php 
+            }
          }
       ?>
       <!-- Repeat .card as needed -->
