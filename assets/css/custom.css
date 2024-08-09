@@ -207,6 +207,10 @@ li {
    align-items: flex-start;
 }
 
+.card-content h2 {
+   font-size: 25px;
+}
+
 .card-content img {
    object-fit: cover;
    width: 100%;
