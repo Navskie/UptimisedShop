@@ -11,14 +11,14 @@
    <nav class="navbar">
       <!-- Logo for larger screens and mobile -->
       <div class="navbar-logo">
-         <img src="assets/images/logo.png" alt="Logo">
+         <!-- <img src="assets/images/logo.png" alt="Logo"> -->
+          Uptimised Shop
       </div>
       
       <!-- Navigation items -->
       <div class="navbar-items">
-         <a href="#" class="nav-item active"><span class="nav-text">Home</span></a>
          <a href="#" class="nav-item"><span class="nav-text">Shop</span></a>
-         <a href="#" class="nav-item cart-btn"><span class="nav-text">Cart</span></a>
+         <a href="" class="nav-item cart-btn"><span class="nav-text" disabled>Be A Reseller</span></a>
          <a href="#" class="nav-item"><span class="nav-text">Profile</span></a>
       </div>
 
