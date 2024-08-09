@@ -29,7 +29,7 @@
       <div class="card loading">
          <div class="skeleton"></div>
          <div class="card-content">
-            <h2>PCK03CD</h2>
+            <h2><?php echo $now ?></h2>
             <hr>
             <span>Package Included: </span>
             <ul>
